@@ -12,10 +12,12 @@ This repository belongs to **George Shamblin**. It holds the framework his Claud
 ## What's in here
 | Folder | What it is |
 |---|---|
-| `site/kit/00-…32-*.md` | The 33 modules your Claude runs, in order |
+| `site/kit/00-…40-*.md` | The 41 modules your Claude runs, in order |
 | `site/kit/templates/` | Starter files for your private brain repo |
-| `site/kit/skills/` | 25 `george-*` skills and the installer |
+| `site/kit/skills/` | 33 `george-*` skills and the installer |
 | `site/dashboard-proto/` | The blank dashboard your Claude turns into yours |
+| `site/gameplan/` | The Long-Form Gameplan presentation |
+| `HANDOFF-FIX-THE-PROBLEMS.md`, `HANDOFF-GAMEPLAN.md` | Two more handoffs to paste into Claude |
 | `build.py`, `index.template.html` | Build the website and run the privacy check |
 | `.github/workflows/publish.yml` | Republishes the site whenever `main` changes |
 

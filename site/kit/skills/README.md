@@ -1,6 +1,6 @@
 # George's skills kit
 
-Thirty ready-to-use skills for George's Claude. Each one turns a recurring job into one sentence. He doesn't need to remember names: ask in plain words and Claude picks the right one. They are George's copies. Change them however he likes.
+Thirty-three ready-to-use skills for George's Claude. Each one turns a recurring job into one sentence. He doesn't need to remember names: ask in plain words and Claude picks the right one. They are George's copies. Change them however he likes.
 
 **The same rules in every skill:** drafts only, and George (or the approver he names) decides in the dashboard. Nothing is sent, posted, published or paid without an Approve. No made-up facts, quotes, numbers or scripture references; anything unsure is marked [check]. No passwords or keys in chat. Everything for publication passes george-slop-check. No em dashes.
 
@@ -21,7 +21,7 @@ Thirty ready-to-use skills for George's Claude. Each one turns a recurring job i
 | george-voice | Writes in his voice from his own best posts | "Make this sound like me." |
 | george-slop-check | Catches AI-sounding writing before anyone sees it | "Slop check this." |
 | george-weekly-article | The Thursday Bible-question article, packaged | "Draft Thursday's article on why there are four Gospels." |
-| george-video-package | Tuesday video script plus everything for upload | "Video package for Torchbearers episode 6." |
+| george-video-package | Tuesday video script, or a long-form episode's upload pack | "Video package for Torchbearers episode 6." |
 | george-repurpose | One piece into Substack, social and podcast versions | "Repurpose Thursday's article." |
 | george-sermon-to-article | Sermon transcript into an article and shorts | "Turn Sunday's sermon into an article." |
 | george-interview-pitch | Podcast and radio pitches, one-sheet, prep | "Pitch me to three podcasts." |
@@ -63,6 +63,14 @@ Thirty ready-to-use skills for George's Claude. Each one turns a recurring job i
 | george-meta-ads | Complete ad briefs and honest results; never launches or changes spend | "Write an ads brief for The Relay." |
 | george-email-campaign | Newsletters and sequences with a test send first; never sends | "Write a welcome sequence." |
 | george-ai-visibility | Monthly AI visibility check per theme; fixes go to the dashboard | "Run the monthly AI visibility check." |
+
+## YouTube long-form
+
+| Skill | What it does | Try saying |
+|---|---|---|
+| george-series-plan | Plans a 6 to 10 week Bible-study series as episodes, one question each | "Plan an eight-week series on Romans." |
+| george-study-to-episode | Edits one filmed study into an episode and Shorts with HyperFrames | "Edit Romans week 3 into an episode." |
+| george-thumbnail | Three readable, honest thumbnails per episode, ready to test | "Thumbnails for Romans week 3." |
 
 ## Installing
 

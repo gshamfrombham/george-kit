@@ -32,7 +32,7 @@ George shouldn't have to remember skill names. He says what he wants in plain wo
 | george-voice | Writes like George, from `voice/VOICE.md` and his gold posts | "Say this the way I would." | 12 |
 | george-slop-check | Flags AI tells, rewrites them in his voice, attaches a pass/fail report | "Slop check this." | 13 |
 | george-weekly-article | Thursday article: a hard Bible question answered up front, told the way he tells stories, verse as text | "Draft Thursday's article on why there are four Gospels." | 24 |
-| george-video-package | Tuesday video: script, title, description, chapters, thumbnail words, pinned comment | "Build Tuesday's video package on Jan Hus." | 24 |
+| george-video-package | Tuesday video: script, title, description, chapters, thumbnail words, pinned comment; for a long-form episode, the upload pack with scripture, playlist, end screen, Shorts captions and podcast notes | "Build Tuesday's video package on Jan Hus." | 24, 39 |
 | george-repurpose | Turns an article or video into Substack, social captions and podcast notes | "Repurpose this week's article." | 28 |
 | george-sermon-to-article | A sermon or teaching transcript into an article draft and three shorts | "Turn Sunday's sermon into an article." | 24 |
 | george-interview-pitch | Pitches to radio and podcast hosts | "Pitch me to three Christian radio shows about The Relay." | 25 |
@@ -70,6 +70,13 @@ George shouldn't have to remember skill names. He says what he wants in plain wo
 | george-meta-ads | Complete Meta ad briefs and weekly results; never launches, edits or changes spend | "Write an ads brief to promote The Relay." | 35 |
 | george-email-campaign | Newsletters and sequences for {{EMAIL_PLATFORM}}, test send to George and {{REVIEWER}} first; never sends | "Write a three-email welcome sequence." | 36 |
 | george-ai-visibility | Monthly AI visibility check with his Rank Prompt access: non-brand visibility per theme, compared with last month, recommendations verified against the live page, fixes sent to the dashboard | "Run the monthly AI visibility check." | 37 |
+
+**YouTube long-form**
+| Skill | What it does | Try saying | Module |
+|---|---|---|---|
+| george-series-plan | A 6 to 10 week Bible-study series as episodes: one question per session, question-first titles with the passage in parentheses, chapter beats, Shorts moments, scripture list, consent reminder | "Plan an eight-week series from the Wednesday study on Romans." | 38 |
+| george-study-to-episode | One filmed study through HyperFrames: transcript, cut plan, chapters, scripture cards, Studio review, render, Shorts | "Edit Romans week 3 into an episode and Shorts." | 39 |
+| george-thumbnail | 2 to 4 word options, three clearly different versions from the template for Test & compare, phone-size check, design check | "Thumbnails for Romans week 3." | 40 |
 
    *Check:* you can name the skill for any plain-words request George makes.
 2. **Strike what he doesn't want.** Remove {{SKILLS_TO_SKIP}} from this table in George's copy (`george-os/framework/11-SKILLS-CATALOG.md`). *Check:* the table in his copy matches what's installed.

@@ -1,0 +1,259 @@
+/* Hallmark · v2.0.0 · deck · locked system: the george-kit site (page.css tokens, Schibsted Grotesk, one navy accent) · genre editorial · signature: "6 of 447" set huge on a deep navy slide · surface: deep navy panels on three slides, a declared posture · deal: manual (the site's own system) */
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, a plan deck argues by order more than by claim; every slide leads with one real number or one decision so the argument reads in the headlines alone */
+/* Hallmark · dismissed 58 · eighteen slides shown one at a time, about seventy words per slide; the word count is the whole deck in scroll mode */
+/* Hallmark · dismissed F4 · the second title action is the outlined quiet button, the deck's one secondary style */
+
+/* ===========================================
+   TOKENS
+   Copied from site/page.css so the deck matches the kit site.
+   Change a colour here and it changes everywhere in the deck.
+   =========================================== */
+:root{
+  --ink:#0E1116;--ink-2:#2F343C;--muted:#5F646C;--subtle:#8A9098;--line:#E8E9ED;--line-strong:#D8DADF;
+  --canvas:#F6F7F9;--surface:#FFFFFF;--surface-2:#F9FAFB;--surface-3:#F1F2F5;
+  --accent:#1F4E8C;--accent-strong:#173D6F;--accent-soft:rgba(31,78,140,.09);--accent-text:#1A4579;--accent-on:#FFFFFF;
+  --deep:#0F1F36;--on-deep:#EEF1F6;--on-deep-muted:#A9B4C6;--deep-line:#24354F;--deep-accent:#9BBCEA;
+  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r-sm:8px;--r-md:12px;--r-card:20px;
+  --gutter:clamp(16px,5vw,64px);
+  --col-gap:clamp(28px,5vw,64px);
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#ECEEF2;--ink-2:#C9CDD4;--muted:#9AA0A8;--subtle:#7A8088;--line:#23272E;--line-strong:#2E333B;
+  --canvas:#0D0F12;--surface:#14171C;--surface-2:#181B21;--surface-3:#1E2229;
+  --accent:#7FA8E0;--accent-strong:#9BBCEA;--accent-soft:rgba(127,168,224,.12);--accent-text:#9BBCEA;--accent-on:#0D0F12;
+  --deep:#13233B;--on-deep:#ECEEF2;--on-deep-muted:#A3AFC2;--deep-line:#2A3D5C;--deep-accent:#9BBCEA;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --ink:#ECEEF2;--ink-2:#C9CDD4;--muted:#9AA0A8;--subtle:#7A8088;--line:#23272E;--line-strong:#2E333B;
+  --canvas:#0D0F12;--surface:#14171C;--surface-2:#181B21;--surface-3:#1E2229;
+  --accent:#7FA8E0;--accent-strong:#9BBCEA;--accent-soft:rgba(127,168,224,.12);--accent-text:#9BBCEA;--accent-on:#0D0F12;
+  --deep:#13233B;--on-deep:#ECEEF2;--on-deep-muted:#A3AFC2;--deep-line:#2A3D5C;--deep-accent:#9BBCEA;
+  color-scheme:dark;
+}
+
+/* ===========================================
+   BASE
+   =========================================== */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--canvas);color:var(--ink);font:400 18px/1.55 var(--font);overflow-x:clip}
+a{color:var(--accent-text);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+p{margin:0 0 16px}
+h1,h2,h3{font-weight:700;color:var(--ink);letter-spacing:-.025em;margin:0;overflow-wrap:break-word;min-width:0;text-wrap:balance}
+h1{font-size:clamp(46px,9vw,112px);line-height:.98}
+h2{font-size:clamp(30px,4.6vw,56px);line-height:1.04;max-width:18ch}
+h3{font-size:19px;line-height:1.3;letter-spacing:-.01em;margin-bottom:4px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;transition:none}
+
+/* ===========================================
+   TOP BAR
+   =========================================== */
+.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;height:56px;padding:0 var(--gutter);
+  background:var(--surface);border-bottom:1px solid var(--line)}
+.mark{flex:none;width:30px;height:30px;border-radius:var(--r-sm);background:var(--accent);color:var(--accent-on);
+  display:grid;place-items:center;font-weight:700;text-decoration:none}
+.bar-title{font-weight:650;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.bar-actions{margin-left:auto;display:flex;gap:8px;flex:none}
+
+/* Buttons: one primary style, one quiet style */
+.btn{font:600 15px/1 var(--font);min-height:44px;padding:0 16px;border-radius:var(--r-sm);border:1px solid transparent;
+  cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  background:var(--accent);color:var(--accent-on);transition:background-color .15s var(--ease),transform .15s var(--ease)}
+.btn:hover{background:var(--accent-strong)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.4;cursor:default;transform:none}
+.btn.quiet{background:var(--surface);color:var(--ink);border-color:var(--line-strong)}
+.btn.quiet:hover{background:var(--surface-3)}
+.bar .btn{min-height:36px;padding:0 12px;font-size:14px}
+
+/* ===========================================
+   SLIDES
+   Without JavaScript every slide shows, one under the other.
+   With JavaScript, html.deck shows one slide at a time.
+   =========================================== */
+.slide{position:relative;display:flex;border-top:1px solid var(--line);background:var(--canvas)}
+.slide:first-child{border-top:0}
+.slide.raised{background:var(--surface)}
+.in{width:100%;max-width:1120px;margin:auto;padding:clamp(56px,9vh,104px) var(--gutter)}
+.lede{font-size:clamp(19px,2vw,23px);line-height:1.45;color:var(--ink-2);max-width:40ch;margin-top:20px}
+.note{font-size:15px;color:var(--muted);max-width:62ch;margin-top:28px}
+.prose{max-width:58ch;color:var(--ink-2)}
+
+/* Deep navy slides */
+.slide.deep{background:var(--deep);color:var(--on-deep);border-top-color:var(--deep-line)}
+.deep h1,.deep h2,.deep h3{color:var(--on-deep)}
+.deep .lede,.deep .prose{color:var(--on-deep)}
+.deep .note,.deep .muted{color:var(--on-deep-muted)}
+.deep a{color:var(--deep-accent)}
+
+/* Split: heading on the left, content on the right */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--col-gap);align-items:start}
+
+/* Title slide */
+.title-in{display:grid;gap:28px}
+.title-in .lede{max-width:34ch}
+.title-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.byline{font-size:15px;color:var(--muted);margin:0}
+
+/* Big figures */
+.big{font-size:clamp(84px,17vw,200px);font-weight:750;line-height:.9;letter-spacing:-.045em;font-variant-numeric:tabular-nums;margin:28px 0 12px}
+.big small{font-size:.32em;font-weight:600;letter-spacing:-.02em;color:var(--on-deep-muted);margin:0 .18em}
+
+/* Facts: value over a short line */
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--col-gap)}
+.facts li{padding:20px 0;border-top:1px solid var(--line-strong)}
+.facts b{display:block;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}
+.facts span{display:block;color:var(--ink-2);font-size:16px;margin-top:8px}
+.facts.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* Rows: label on the left, figure on the right */
+.rows{list-style:none;margin:28px 0 0;padding:0;max-width:640px}
+.rows li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--deep-line)}
+.rows b{font-variant-numeric:tabular-nums;font-size:22px;white-space:nowrap}
+
+/* Milestones */
+.miles{list-style:none;margin:0;padding:0}
+.miles li{display:grid;grid-template-columns:112px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line-strong);align-items:baseline}
+.miles time{color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums}
+.miles b{font-size:clamp(24px,3vw,34px);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.miles span{display:block;color:var(--ink-2);font-size:16px}
+.miles li.now b{color:var(--accent-text)}
+
+/* Compare: label left, figure right */
+.compare{list-style:none;margin:0;padding:0}
+.compare li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-top:1px solid var(--line-strong)}
+.compare span{color:var(--ink-2);font-size:16px;max-width:30ch}
+.compare b{font-size:clamp(24px,3vw,36px);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.compare li.win b{color:var(--accent-text)}
+
+/* Points: numbered short paragraphs */
+.points{list-style:none;margin:0;padding:0;display:grid;gap:24px;counter-reset:pt}
+.points li{counter-increment:pt;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px}
+.points li::before{content:counter(pt);font-weight:700;color:var(--accent-text);font-variant-numeric:tabular-nums;padding-top:1px}
+.points p{margin:0;color:var(--ink-2);font-size:17px}
+
+/* Pillars */
+.pillars{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pillars li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:24px 20px}
+.pillars .n{display:block;font-size:44px;font-weight:750;letter-spacing:-.04em;color:var(--accent-text);line-height:1;margin-bottom:20px}
+.pillars p{margin:0;color:var(--ink-2);font-size:16px}
+
+/* Flow: numbered steps in a row */
+.flow{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:fl}
+.flow li{counter-increment:fl;padding:20px 20px 0 0;border-top:3px solid var(--accent)}
+.flow li::before{content:counter(fl);display:block;font-weight:700;font-size:15px;color:var(--accent-text);margin-bottom:8px}
+.flow p{margin:0;color:var(--ink-2);font-size:16px}
+
+/* Hook shape */
+.hook{list-style:none;margin:0;padding:0}
+.hook li{padding:16px 0;border-top:1px solid var(--line-strong);display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;counter-increment:hk}
+.hook{counter-reset:hk}
+.hook li::before{content:counter(hk);color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* Thumbnail example */
+.thumb-pair{display:grid;gap:16px}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:var(--r-md);background:var(--deep);color:var(--on-deep);overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,58fr) minmax(0,42fr)}
+.thumb-text{align-self:center;padding:0 0 0 7%;font-size:clamp(26px,4.4vw,52px);font-weight:800;line-height:.95;letter-spacing:-.02em}
+.thumb-text em{font-style:normal;color:var(--deep-accent)}
+.thumb-badge{position:absolute;top:6%;left:4%;width:7%;aspect-ratio:1;border-radius:4px;background:var(--accent);color:var(--accent-on);
+  display:grid;place-items:center;font-weight:700;font-size:clamp(11px,1.4vw,16px)}
+.thumb-slot{margin:8% 8% 8% 0;border:2px dashed var(--deep-line);border-radius:var(--r-sm);display:grid;place-items:center;text-align:center;
+  color:var(--on-deep-muted);font-size:14px;padding:8px}
+.thumb-title{font-size:17px;color:var(--ink-2);margin:0}
+.thumb-title b{color:var(--ink)}
+.rules{list-style:none;margin:0;padding:0}
+.rules li{padding:12px 0;border-top:1px solid var(--line-strong);color:var(--ink-2);font-size:17px}
+
+/* One study, six pieces */
+.pieces{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pieces li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:20px}
+.pieces li.lead-piece{background:var(--accent);border-color:var(--accent);color:var(--accent-on)}
+.pieces li.lead-piece h3,.pieces li.lead-piece p{color:var(--accent-on)}
+.pieces p{margin:0;color:var(--ink-2);font-size:16px}
+
+/* Two columns of plain text */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap);margin-top:36px}
+.cols ul{margin:12px 0 0;padding-left:20px;color:var(--ink-2)}
+.cols li{margin:8px 0}
+
+/* Who does what */
+.who{width:100%;border-collapse:collapse;margin-top:32px}
+.who th,.who td{text-align:left;vertical-align:top;padding:16px 16px 16px 0;border-top:1px solid var(--line-strong)}
+.who th{width:22%;font-size:20px;font-weight:700;letter-spacing:-.01em}
+.who td{color:var(--ink-2)}
+.week{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.week li{background:var(--surface-3);border-radius:var(--r-sm);padding:8px 12px;font-size:15px;color:var(--ink-2)}
+.week li b{color:var(--ink)}
+
+/* The first 90 days */
+.order{margin:32px 0 0;padding:0;list-style:none;columns:2;column-gap:var(--col-gap);counter-reset:od}
+.order li{break-inside:avoid;counter-increment:od;display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;padding:12px 0;border-top:1px solid var(--line-strong);font-size:18px}
+.order li::before{content:counter(od);font-weight:700;color:var(--accent-text);font-variant-numeric:tabular-nums}
+
+/* Measures */
+.measures{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.measures li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:24px}
+.measures p{margin:8px 0 0;color:var(--ink-2);font-size:16px}
+.measures .from{display:block;margin-top:12px;font-size:15px;color:var(--muted)}
+
+/* The prompt */
+.prompt{display:flex;gap:12px;align-items:stretch;margin-top:32px;background:var(--surface);color:var(--ink);border-radius:var(--r-md);padding:12px;max-width:880px}
+.prompt code{flex:1;font:15px/1.55 var(--mono);padding:8px;white-space:normal;overflow-wrap:anywhere;min-width:0}
+.prompt .btn{flex:none}
+.after{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:16px}
+
+/* ===========================================
+   DECK MODE (added by the script)
+   =========================================== */
+.ctrl{display:none}
+html.deck body{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+html.deck main{min-height:0;overflow:clip;position:relative}
+html.deck .slide{display:none;height:100%;overflow-y:auto;border-top:0}
+html.deck .slide.is-current{display:flex;animation:enter .45s var(--ease) both}
+html.deck .ctrl{display:flex;align-items:center;gap:12px;padding:12px var(--gutter);background:var(--surface);border-top:1px solid var(--line);position:relative}
+.ctrl .count{font-variant-numeric:tabular-nums;font-size:15px;color:var(--muted);min-width:64px;text-align:center}
+.ctrl .part{margin-left:auto;font-size:15px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.progress{position:absolute;left:0;right:0;top:-1px;height:2px;background:transparent}
+.progress span{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(var(--p,0));transition:transform .3s var(--ease)}
+@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ===========================================
+   RESPONSIVE: tablet, then phone (390px)
+   =========================================== */
+@media (max-width:980px){
+  .pillars,.flow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+  .pieces{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .split,.cols,.measures{grid-template-columns:minmax(0,1fr)}
+  .facts,.facts.three,.pieces{grid-template-columns:minmax(0,1fr)}
+  .pillars,.flow{grid-template-columns:minmax(0,1fr)}
+  .order{columns:1}
+  .miles li{grid-template-columns:84px minmax(0,1fr)}
+  .who th{display:block;width:auto;padding-bottom:4px}
+  .who td{display:block;border-top:0;padding-top:0}
+  .who tr{display:block;border-top:1px solid var(--line-strong);padding:12px 0}
+  .who th,.who td{border-top:0}
+  .prompt{flex-direction:column}
+  .in{padding-top:40px;padding-bottom:48px}
+  .ctrl .part{display:none}
+  .ctrl .count{margin-left:auto;margin-right:auto}
+  .bar .hide-sm{display:none}
+}
+
+/* ===========================================
+   REDUCED MOTION
+   =========================================== */
+@media (prefers-reduced-motion:reduce){
+  html.deck .slide.is-current{animation:none}
+  .btn,.progress span{transition:none}
+}

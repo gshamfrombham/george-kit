@@ -17,7 +17,8 @@ GROUPS = [
     ("Automation and autonomy", range(19, 25)),
     ("Your work: G's Plan, TOI, boundaries, channels", range(25, 29)),
     ("Running it: scoreboard, fixes, iteration, prompts", range(29, 33)),
-    ("Marketing command center: social, ads, email, search", range(33, 40)),
+    ("Marketing command center: social, ads, email, search", range(33, 38)),
+    ("Long-form video: strategy, editing, thumbnails", range(38, 50)),
 ]
 
 # Privacy gate: nothing private on a public page.
@@ -113,6 +114,10 @@ def main():
 
     # The handoff George pastes into Claude, served from the site too
     (SITE / "HANDOFF.md").write_text((ROOT / "HANDOFF-FOR-CLAUDE.md").read_text(encoding="utf-8"), encoding="utf-8")
+    # Extra handoffs: fix the three problems; the long-form video gameplan
+    for src, dst in (("HANDOFF-FIX-THE-PROBLEMS.md", "HANDOFF-FIX.md"), ("HANDOFF-GAMEPLAN.md", "HANDOFF-GAMEPLAN.md")):
+        if (ROOT / src).exists():
+            (SITE / dst).write_text((ROOT / src).read_text(encoding="utf-8"), encoding="utf-8")
 
     # ALL.md: one fetch for agents
     parts = [f"# George's Agent Framework v{VERSION} ({today}), all modules in one file\n",
