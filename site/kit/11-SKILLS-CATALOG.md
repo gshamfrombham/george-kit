@@ -25,6 +25,7 @@ George shouldn't have to remember skill names. He says what he wants in plain wo
 | george-brain | Adds or updates a fact, person, project or decision with its source; never duplicates | "Remember that the Cuba trip moved to March." | 06 |
 | george-coach | Runs a big job: plan, a checkbox per step, proof for each, checkpoints | "Use george-coach to move my book pages to the new design." | 07 |
 | george-weekly-brief | Sunday: what shipped, what's due, what's stuck, any session without a handoff | "Weekly brief, please." | 24 |
+| george-better-prompt | Rewrites a rough ask using the eight parts of a strong ask, asks at most three questions, shows the improved prompt and offers to run it | "Make this prompt better: thumbnail for Romans week 3." | 41, 42 |
 
 **Writing in his voice**
 | Skill | What it does | Try saying | Module |

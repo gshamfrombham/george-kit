@@ -9,6 +9,10 @@ This repository belongs to **George Shamblin**. It holds the framework his Claud
 2. **Hand it to Claude.** On your laptop, open the Claude desktop app, click the **Code** tab, start a **local** session, and paste everything in [HANDOFF-FOR-CLAUDE.md](HANDOFF-FOR-CLAUDE.md).
 3. **Answer its questions and do the steps marked GEORGE.** That's it. Claude does the rest and checks each step.
 
+**Then, in this order:**
+- Paste [HANDOFF-FIX-THE-PROBLEMS.md](HANDOFF-FIX-THE-PROBLEMS.md) to stop relearning things, stop drafts that sound like AI, stop steering every step, and set Claude up to give you better output (modules 41 and 42).
+- Watch [The Long-Form Gameplan](https://gshamfrombham.github.io/george-kit/gameplan/), then paste [HANDOFF-GAMEPLAN.md](HANDOFF-GAMEPLAN.md) to start your long-form teaching channel.
+
 ## What's in here
 | Folder | What it is |
 |---|---|

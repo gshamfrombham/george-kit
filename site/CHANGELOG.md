@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4 (2026-11-06)
+- Getting great output: module 41 (pro setup for the Claude desktop app: a personal instruction file, hooks that load the brain at the start of every session and remind about the handoff, helper agents for research and review, model and effort, safe permissions) and module 42 (prompting like a pro: the eight parts of a strong ask, twelve patterns with before and after examples, and a printable cheat sheet).
+- New skill george-better-prompt: turns a rough ask into a strong one.
+- The fix-the-problems handoff gains Part D, getting better output.
+
 ## v0.3 (2026-11-06)
 - Long-form video: module 38 (long-form YouTube strategy, built on what works for Truth Unites), module 39 (editing filmed Bible studies with HyperFrames) and module 40 (thumbnail system), with three new skills and a long-form update to george-video-package.
 - The Long-Form Gameplan: a presentation and a handoff George's Claude follows to carry it out.

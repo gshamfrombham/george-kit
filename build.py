@@ -18,7 +18,8 @@ GROUPS = [
     ("Your work: G's Plan, TOI, boundaries, channels", range(25, 29)),
     ("Running it: scoreboard, fixes, iteration, prompts", range(29, 33)),
     ("Marketing command center: social, ads, email, search", range(33, 38)),
-    ("Long-form video: strategy, editing, thumbnails", range(38, 50)),
+    ("Long-form video: strategy, editing, thumbnails", range(38, 41)),
+    ("Getting great output from Claude", range(41, 50)),
 ]
 
 # Privacy gate: nothing private on a public page.

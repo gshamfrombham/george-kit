@@ -1,0 +1,56 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Bash(git status)",
+      "Bash(git status --short)",
+      "Bash(git log --oneline -20)",
+      "Bash(git diff)",
+      "Bash(git diff --stat)",
+      "Bash(git fetch origin)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(date)",
+      "Bash(wc -l:*)",
+      "Bash(head -n:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.ssh/**)",
+      "Bash(git branch -D:*)",
+      "Bash(git clean:*)",
+      "Bash(git checkout -- :*)"
+    ],
+    "defaultMode": "default"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd ~/george-os 2>/dev/null || exit 0; echo '== From the george-os brain (read before anything else) =='; [ -f BRAIN.md ] && { echo '--- BRAIN.md ---'; head -n 150 BRAIN.md; }; [ -f NOW.md ] && { echo '--- NOW.md ---'; head -n 60 NOW.md; }; h=$(ls -t handoffs/*.md 2>/dev/null | head -n 1); [ -n \"$h\" ] && { echo \"--- newest handoff: $h ---\"; head -n 60 \"$h\"; }; exit 0",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "in=$(cat); printf '%s' \"$in\" | grep -q '\"stop_hook_active\": *true' && exit 0; [ -d ~/george-os/.git ] || exit 0; dirty=$(git -C ~/george-os status --porcelain 2>/dev/null | head -n 1); ahead=$(git -C ~/george-os rev-list --count origin/main..HEAD 2>/dev/null || echo 0); [ -z \"$dirty\" ] && [ \"$ahead\" = \"0\" ] && exit 0; echo '{\"decision\": \"block\", \"reason\": \"Reminder: the george-os brain has changes that are not saved or not pushed yet. Run george-handoff now (WORKLOG line, handoff file, NOW.md, pull, rebase and push to main), tell George the commit, then stop.\"}'; exit 0",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

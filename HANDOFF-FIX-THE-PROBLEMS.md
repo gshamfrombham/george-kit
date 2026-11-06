@@ -6,7 +6,7 @@
 
 You are George Shamblin's Claude. George is an advanced Claude user who has mostly worked in the claude.ai web app across many chats and Projects. Three problems keep costing him time. This handoff fixes each one with something concrete you set up, a habit you keep, and a check that proves it worked. The full framework is in the `george-kit` repo (`site/kit/00-START-HERE.md`); the module numbers below point into it.
 
-Work through Parts A to C in order. After each part, tell George in one line what changed and what he does differently from now on. Batch any questions into one message.
+Work through Parts A to D in order (Part D makes everything else work better, so do it even if A to C are already done). After each part, tell George in one line what changed and what he does differently from now on. Batch any questions into one message.
 
 ## The three problems, in George's words
 1. **"I keep relearning things."** One chat doesn't know what another did. Long chats forget what was decided at the start. He re-explains G's Plan, his voice, his projects and his preferences over and over.
@@ -71,8 +71,27 @@ Work through Parts A to C in order. After each part, tell George in one line wha
 
 **Done when:** in a normal week George spends his Claude time approving, deciding and teaching, not prompting, and nothing recurring depends on him remembering to start it.
 
-## After all three parts
-Write a one-page `decisions/0005-how-george-works-with-claude.md` that lists the habits above in George's own words, and add the phrases ("handoff", "log that decision", "add this to the brain", "slop-check this", "make this a recurring job", "status") to his Projects' instructions and to `32-PROMPT-LIBRARY` in his copy. Then tell George: "Here are the six things you say from now on," and list them.
+## Part D: Get better output (set up like a pro)
+
+**Why it happens.** The same Claude plan gives very different results depending on what Claude knows when the ask arrives, which tools it can reach, and whether anyone checks its work before George sees it. Typed into a bare chat, even a good ask gets an average answer. Parts A to C build the brain, the standards and the dashboard; this part wires them into every session and teaches the asking side.
+
+**What you set up**
+1. **The engine room** (module 41). Install the personal instruction file at `~/.claude/CLAUDE.md` (who George is, how he wants work done, the hard rules), the hooks in `~/.claude/settings.json` (session start prints BRAIN, NOW and the newest handoff; session end reminds Claude to write the handoff), safe permissions (a short list of read-only commands runs freely; nothing that changes, sends or publishes is pre-approved, and his sessions stay in the normal ask mode, never Auto or bypass), the george-* skills including george-better-prompt, and two helper agents: george-reviewer (reads, never edits, grades every draft) and george-researcher (digs and reports with sources). *Check:* a new local Code session knows his hard rules and what's in NOW.md without being told, and the hook tests are recorded in `decisions/0006-pro-setup.md`.
+2. **The right tab and the right model** (module 41). Chat in a Project for thinking and drafts, a local Code session for anything that saves, Cowork for long hands-off jobs. The most capable model and high effort for anything public in his name; lighter settings for chores. *Check:* George picks the tab and the model correctly for three of his own jobs.
+3. **Asking like a pro** (module 42). The eight parts of a strong ask, the twelve patterns, steering with Esc and the two-strikes reset, and turning a prompt that worked into a skill. *Check:* three of George's own recent asks, rewritten and run again, beat the originals in his judgment.
+4. **The 10-minute test** (module 41, step 12). One real request done the old way and the new way, side by side. *Check:* George says which one he'd publish and why, saved to `FEEDBACK.md`.
+
+**Habits for George**
+- Before a big job, say **"plan first, then wait."**
+- When an ask feels thin, say **"make this prompt better."**
+- Before anything comes to him for approval, it gets **"have george-reviewer check it."**
+- After two corrections that didn't land, say **"handoff"** and start fresh with a better first message.
+- When a prompt works and the job will come back, say **"turn this into a skill."**
+
+**Done when:** the 10-minute test favors the new way, every session opens already knowing the brain, and George's first drafts need fewer than two rounds of changes for two weeks running.
+
+## After all four parts
+Write a one-page `decisions/0005-how-george-works-with-claude.md` that lists the habits above in George's own words, and add the phrases ("handoff", "log that decision", "add this to the brain", "slop-check this", "make this a recurring job", "status", "make this prompt better") to his Projects' instructions and to `32-PROMPT-LIBRARY` in his copy. Then tell George: "Here are the seven things you say from now on," and list them.
 
 ## Standing rules
 - Drafts, George decides. Nothing is sent, posted, published or paid without his Approve.

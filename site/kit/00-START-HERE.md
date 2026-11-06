@@ -71,6 +71,8 @@ George relearns the same things over and over because nothing his agents learn i
 | 38 | [Long-Form YouTube Strategy](./38-LONG-FORM-YOUTUBE.md) | Pillars, filmed study series, one question per episode, Shorts, podcast, collaborations | 12, 13, 14, 24, 37 |
 | 39 | [Video Editing with HyperFrames](./39-VIDEO-EDITING-HYPERFRAMES.md) | Edit each filmed study into a finished episode, Shorts and thumbnails | 09, 12, 16, 38 |
 | 40 | [Thumbnail System](./40-THUMBNAIL-SYSTEM.md) | One photo session, a reusable template, three options per episode, tested | 14, 38, 39 |
+| 41 | [Pro Setup for Claude Desktop](./41-PRO-SETUP.md) | Instruction file, hooks that load the brain, skills, a reviewer and researcher, the right model and safe permissions | 06, 07, 08, 10 |
+| 42 | [Prompting Like a Pro](./42-PROMPTING-LIKE-A-PRO.md) | The eight parts of a strong ask, twelve patterns from his work, steering, and a printable cheat sheet | 41 |
 
 Three more things come with this framework:
 - **Skills:** [./skills/](./skills/README.md), the george-* skills with an installer. Module 10 installs them.

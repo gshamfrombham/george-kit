@@ -1,6 +1,6 @@
 # George's skills kit
 
-Thirty-three ready-to-use skills for George's Claude. Each one turns a recurring job into one sentence. He doesn't need to remember names: ask in plain words and Claude picks the right one. They are George's copies. Change them however he likes.
+Thirty-four ready-to-use skills for George's Claude. Each one turns a recurring job into one sentence. He doesn't need to remember names: ask in plain words and Claude picks the right one. They are George's copies. Change them however he likes.
 
 **The same rules in every skill:** drafts only, and George (or the approver he names) decides in the dashboard. Nothing is sent, posted, published or paid without an Approve. No made-up facts, quotes, numbers or scripture references; anything unsure is marked [check]. No passwords or keys in chat. Everything for publication passes george-slop-check. No em dashes.
 
@@ -13,6 +13,7 @@ Thirty-three ready-to-use skills for George's Claude. Each one turns a recurring
 | george-brain | Remembers a fact, person, project or decision, once | "Remember that the Cuba trip is March 14 to 21." |
 | george-coach | Runs a big job step by step with proof | "Coach this: set up the dashboard." |
 | george-weekly-brief | Sunday brief: shipped, waiting, next, stuck | "Weekly brief, please." |
+| george-better-prompt | Turns a rough ask into a strong prompt, then offers to run it | "Make this prompt better: write something for TOI about the Cuba trip." |
 
 ## Writing that sounds like George
 
