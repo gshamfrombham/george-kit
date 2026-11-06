@@ -1,0 +1,13 @@
+# Built by build.py on every publish; never edit by hand
+site/index.html
+site/ALL.md
+site/HANDOFF.md
+site/george-kit.zip
+site/robots.txt
+site/_headers
+site/.nojekyll
+site/kit/skills/zips/
+__pycache__/
+.DS_Store
+local_cache/
+site/local_cache/

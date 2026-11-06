@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>George's Agent Framework</title>
+<meta name="description" content="A step-by-step framework George Shamblin hands his Claude agent: memory, skills, dashboard, automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="mark" aria-hidden="true">G</div>
+    <div class="brand">George's Agent Framework <span class="ver">v{{VERSION}} · {{DATE}}</span></div>
+    <nav class="toplinks"><a href="#start">Start</a><a href="#modules">Modules</a><a href="#skills">Skills</a><a href="dashboard-proto/">Dashboard starter</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">For George's Claude, and for George</p>
+    <h1>One framework your agent follows to set up everything, then keep it running.</h1>
+    <p class="lead">Memory that doesn't reset, skills ready to use, a dashboard your team can open, and jobs that run on their own while you approve what matters. Your agent works through it module by module and fills in what only it knows about you, like G's Plan and TOI.</p>
+    <div class="stats">
+      <div><b>{{N_MODULES}}</b><span>modules</span></div>
+      <div><b>{{N_SKILLS}}</b><span>ready skills</span></div>
+      <div><b>{{N_TEMPLATES}}</b><span>templates</span></div>
+      <div><b>1</b><span>dashboard starter</span></div>
+    </div>
+  </section>
+
+  <section id="start" class="card start">
+    <h2>Start here</h2>
+    <p>Open the Claude desktop app on your laptop, go to the <b>Code</b> tab, start a <b>local</b> session, and paste this:</p>
+    <div class="copy">
+      <code id="prompt">Read {{BASE}}/HANDOFF.md and follow it. Work part by part, check each step, batch your questions for me, and stop only for the steps marked GEORGE.</code>
+      <button type="button" data-copy="prompt">Copy</button>
+    </div>
+    <div class="alts">
+      <a class="btn" href="george-kit.zip">Download everything (.zip)</a>
+      <a class="btn ghost" href="view.html?f=HANDOFF.md">Read the handoff</a>
+      <a class="btn ghost" href="ALL.md">All modules in one file</a>
+      <a class="btn ghost" href="dashboard-proto/">Open the dashboard starter</a>
+    </div>
+    <ol class="how">
+      <li><b>Your agent reads module 00</b> and lays out the order.</li>
+      <li><b>It fills the blanks</b> from what it already knows about you and asks you once, in a batch.</li>
+      <li><b>You do only the GEORGE steps:</b> sign-ups, approvals, choosing people.</li>
+      <li><b>You and Trevor iterate.</b> New versions land as proposals your agent shows you. Nothing you changed gets overwritten.</li>
+    </ol>
+  </section>
+
+  <section id="modules">
+    <h2 class="sec">The modules</h2>
+    <p class="muted">Click a module to read it. Agents fetch the <code>.md</code> link.</p>
+    {{MODULES}}
+  </section>
+
+  <section id="skills" class="two">
+    <div class="card">
+      <h2>Ready skills</h2>
+      <p class="muted">Your copies to rename, rewrite or delete. Install them with <a href="view.html?f=kit/skills/README.md">the skills README</a>.</p>
+      <ul class="pills">{{SKILLS}}</ul>
+    </div>
+    <div class="card">
+      <h2>Templates for your brain repo</h2>
+      <p class="muted">Starter files your agent copies into <code>george-os</code>.</p>
+      <ul class="pills">{{TEMPLATES}}</ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>The dashboard starter</h2>
+    <p>A clean, blank dashboard your agent customizes into yours: approvals, your weekly rhythm, G's Plan and TOI pages, memory, automations, data and team. It runs with sample data until module 16 connects it.</p>
+    <a class="btn" href="dashboard-proto/">Open it</a>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>This framework and this site belong to George Shamblin. Version {{VERSION}}, built {{DATE}}. Changes are listed in <a href="view.html?f=CHANGELOG.md">the changelog</a>. Feedback goes in <code>FEEDBACK.md</code> in your brain repo (module 31).</p>
+</footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  const t = document.getElementById(b.dataset.copy).textContent;
+  try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1600); } catch (e) { b.textContent = 'Select and copy'; }
+}));
+</script>
+</body>
+</html>

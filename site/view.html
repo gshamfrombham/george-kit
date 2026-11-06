@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Framework Module</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="page.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap top-in"><div class="mark" aria-hidden="true">G</div><a class="brand" href="./" style="color:inherit">George's Agent Framework</a></div></header>
+<main class="wrap">
+  <nav class="crumbs"><a href="./#modules">All modules</a><a id="raw" href="#">Raw markdown</a><a id="prev" href="#" hidden>Previous</a><a id="next" href="#" hidden>Next</a></nav>
+  <article class="card doc" id="doc"><p class="muted">Loading…</p></article>
+</main>
+<script>
+(async () => {
+  const q = new URLSearchParams(location.search);
+  const f = q.get('f') || 'kit/00-START-HERE.md';
+  if (!/^[A-Za-z0-9_./-]+\.md$/.test(f) || f.includes('..')) { document.getElementById('doc').textContent = 'Not found.'; return; }
+  document.getElementById('raw').href = f;
+  const dir = f.includes('/') ? f.slice(0, f.lastIndexOf('/') + 1) : '';
+  const res = await fetch(f);
+  if (!res.ok) { document.getElementById('doc').textContent = 'Not found.'; return; }
+  const md = await res.text();
+  const el = document.getElementById('doc');
+  el.innerHTML = DOMPurify.sanitize(marked.parse(md, { breaks: true, gfm: true }));
+  const h1 = el.querySelector('h1'); if (h1) document.title = h1.textContent;
+  // Route relative .md links back through the viewer; other relative links resolve from the file's folder.
+  const root = new URL('.', location.href);
+  el.querySelectorAll('a[href]').forEach(a => {
+    const h = a.getAttribute('href');
+    if (/^(https?:|mailto:|#)/.test(h)) return;
+    const url = new URL(h, new URL(dir, root));
+    if (!url.href.startsWith(root.href)) return;
+    const path = url.href.slice(root.href.length).split('#')[0];
+    a.href = path.endsWith('.md') ? 'view.html?f=' + path + url.hash : path + url.hash;
+  });
+  const m = f.match(/^kit\/(\d\d)-/);
+  if (m) {
+    const n = parseInt(m[1], 10);
+    try {
+      const idx = await (await fetch('./')).text();
+      const files = [...idx.matchAll(/view\.html\?f=kit\/(\d\d-[^"]+\.md)/g)].map(x => x[1]);
+      const i = files.findIndex(x => x.startsWith(m[1] + '-'));
+      if (i > 0) { const p = document.getElementById('prev'); p.href = 'view.html?f=kit/' + files[i - 1]; p.hidden = false; }
+      if (i >= 0 && i < files.length - 1) { const x = document.getElementById('next'); x.href = 'view.html?f=kit/' + files[i + 1]; x.hidden = false; }
+    } catch (e) {}
+  }
+})();
+</script>
+</body>
+</html>

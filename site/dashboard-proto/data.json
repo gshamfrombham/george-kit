@@ -1,0 +1,815 @@
+{
+  "_note": "SAMPLE DATA. Every name, number and item below is a placeholder so the screens have something to show. In demo mode, scheduled_for dates are shifted so the earliest upcoming item lands today. Replace it with your real API (see README.md) or edit it by hand.",
+  "sample": true,
+  "items": [
+    {
+      "id": "itm-101",
+      "brand": "author",
+      "kind": "Article package",
+      "title": "Thursday article: sample question title",
+      "status": "pending",
+      "version": 2,
+      "updated": "2026-11-05T15:10:00-06:00",
+      "requestedBy": "Weekly article task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "0 em dashes, 0 banned phrases. Verse quoted as text."
+      },
+      "destinations": [
+        "Website (automatic)",
+        "Substack (paste)",
+        "Facebook caption (paste)"
+      ],
+      "preview": "SAMPLE. The first two sentences answer the question plainly. Then the story starts: a person, a place, a moment.\n\nThis is placeholder text so you can see how a draft reads in the drawer.",
+      "history": [
+        {
+          "when": "2026-11-04T09:02:00-06:00",
+          "who": "Weekly article task",
+          "what": "Version 1 created"
+        },
+        {
+          "when": "2026-11-04T16:40:00-06:00",
+          "who": "George",
+          "what": "Requested changes: open with the hunting story"
+        },
+        {
+          "when": "2026-11-05T15:10:00-06:00",
+          "who": "Weekly article task",
+          "what": "Version 2 created. Approval reset to pending."
+        }
+      ],
+      "job_level": 3,
+      "channel": "website",
+      "scheduled_for": "2026-11-12T09:00:00-06:00",
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 2,
+          "when": "2026-11-05T15:10:00-06:00"
+        }
+      ],
+      "approvals": []
+    },
+    {
+      "id": "itm-102",
+      "brand": "author",
+      "kind": "Video package",
+      "title": "Tuesday video: sample episode title",
+      "status": "ready_for_person",
+      "version": 1,
+      "updated": "2026-11-03T10:00:00-06:00",
+      "requestedBy": "Weekly video task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "YouTube title and description (paste)",
+        "Community post (paste)"
+      ],
+      "preview": "SAMPLE. Script outline, title options, description, chapters and pinned comment live here.",
+      "history": [
+        {
+          "when": "2026-11-01T06:00:00-05:00",
+          "who": "Weekly video task",
+          "what": "Version 1 created"
+        },
+        {
+          "when": "2026-11-03T10:00:00-06:00",
+          "who": "George",
+          "what": "Approved version 1"
+        }
+      ],
+      "job_level": 2,
+      "channel": "youtube",
+      "scheduled_for": "2026-11-10T09:00:00-06:00",
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 1,
+          "when": "2026-11-03T10:00:00-06:00"
+        }
+      ],
+      "approvals": [
+        {
+          "by": "you@example.com",
+          "byName": "George Shamblin",
+          "version": 1,
+          "when": "2026-11-03T10:00:00-06:00"
+        }
+      ]
+    },
+    {
+      "id": "itm-103",
+      "brand": "toi",
+      "kind": "Prayer and donor update",
+      "title": "Monthly update, English and Spanish",
+      "status": "changes",
+      "version": 1,
+      "updated": "2026-11-04T12:00:00-06:00",
+      "requestedBy": "Missions update task",
+      "slopCheck": {
+        "result": "flag",
+        "notes": "2 em dashes and one stock phrase. Rewrite suggested."
+      },
+      "destinations": [
+        "Email to supporters (paste)",
+        "Website news (automatic)"
+      ],
+      "preview": "SAMPLE. A short story from the field, three prayer requests, one clear ask.",
+      "history": [
+        {
+          "when": "2026-11-04T08:00:00-06:00",
+          "who": "Missions update task",
+          "what": "Version 1 created"
+        },
+        {
+          "when": "2026-11-04T12:00:00-06:00",
+          "who": "Team approver",
+          "what": "Requested changes: add the trip dates"
+        }
+      ],
+      "job_level": 2,
+      "channel": "email",
+      "scheduled_for": "2026-11-13T08:00:00-06:00",
+      "reviews": [],
+      "approvals": []
+    },
+    {
+      "id": "itm-104",
+      "brand": "gsplan",
+      "kind": "Weekly item",
+      "title": "G's Plan: sample weekly item",
+      "status": "pending",
+      "version": 1,
+      "updated": "2026-11-06T07:30:00-06:00",
+      "requestedBy": "G's Plan task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "{{GS_PLAN_DESTINATION}}"
+      ],
+      "preview": "SAMPLE. Your agent fills this brand in from module 25.",
+      "history": [
+        {
+          "when": "2026-11-06T07:30:00-06:00",
+          "who": "G's Plan task",
+          "what": "Version 1 created"
+        }
+      ],
+      "job_level": 2,
+      "channel": "website",
+      "scheduled_for": "2026-11-11T07:00:00-06:00",
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 1,
+          "when": "2026-11-06T07:30:00-06:00"
+        }
+      ],
+      "approvals": []
+    },
+    {
+      "id": "itm-105",
+      "brand": "author",
+      "kind": "Social pack",
+      "title": "Last week's article: captions",
+      "status": "published",
+      "version": 1,
+      "updated": "2026-10-30T11:00:00-05:00",
+      "requestedBy": "Repurpose task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "Instagram (paste)",
+        "Facebook (paste)"
+      ],
+      "preview": "SAMPLE.",
+      "publishUrl": "https://example.com/sample",
+      "history": [
+        {
+          "when": "2026-10-29T06:00:00-05:00",
+          "who": "Repurpose task",
+          "what": "Version 1 created"
+        },
+        {
+          "when": "2026-10-29T18:00:00-05:00",
+          "who": "George",
+          "what": "Approved version 1"
+        },
+        {
+          "when": "2026-10-30T11:00:00-05:00",
+          "who": "Publish task",
+          "what": "Published. Receipt saved."
+        }
+      ],
+      "job_level": 2,
+      "channel": "facebook",
+      "scheduled_for": "2026-10-30T11:00:00-05:00",
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 1,
+          "when": "2026-10-30T11:00:00-05:00"
+        }
+      ],
+      "approvals": [
+        {
+          "by": "you@example.com",
+          "byName": "George Shamblin",
+          "version": 1,
+          "when": "2026-10-30T11:00:00-05:00"
+        }
+      ]
+    },
+    {
+      "id": "itm-106",
+      "brand": "author",
+      "kind": "Facebook post",
+      "channel": "facebook",
+      "scheduled_for": "2026-11-12T12:00:00-06:00",
+      "title": "SAMPLE: Facebook post for Thursday's article",
+      "status": "pending",
+      "version": 1,
+      "job_level": 2,
+      "updated": "2026-11-06T09:00:00-06:00",
+      "requestedBy": "Repurpose task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "Facebook Page (paste)"
+      ],
+      "preview": "SAMPLE. Two short lines that point to the article, one question to the reader, the link.",
+      "history": [
+        {
+          "when": "2026-11-06T09:00:00-06:00",
+          "who": "Repurpose task",
+          "what": "Version 1 created"
+        }
+      ],
+      "reviews": [],
+      "approvals": []
+    },
+    {
+      "id": "itm-107",
+      "brand": "author",
+      "kind": "Instagram post",
+      "channel": "instagram",
+      "scheduled_for": "2026-11-12T17:30:00-06:00",
+      "title": "SAMPLE: Instagram carousel, 5 slides",
+      "status": "pending",
+      "version": 1,
+      "job_level": 2,
+      "updated": "2026-11-06T09:05:00-06:00",
+      "requestedBy": "Repurpose task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Alt text on all 5 slides."
+      },
+      "destinations": [
+        "Instagram (paste)"
+      ],
+      "preview": "SAMPLE. Slide 1: the question. Slides 2 to 4: the answer in three short beats. Slide 5: where to read the full article.",
+      "history": [
+        {
+          "when": "2026-11-06T09:05:00-06:00",
+          "who": "Repurpose task",
+          "what": "Version 1 created"
+        }
+      ],
+      "reviews": [],
+      "approvals": []
+    },
+    {
+      "id": "itm-108",
+      "brand": "author",
+      "kind": "Meta ad",
+      "channel": "meta_ads",
+      "scheduled_for": "2026-11-09T08:00:00-06:00",
+      "title": "SAMPLE: Book ad, 7-day test",
+      "status": "pending",
+      "version": 1,
+      "job_level": 2,
+      "updated": "2026-11-06T10:00:00-06:00",
+      "requestedBy": "Book promo task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "Meta ads (set up by hand after approval)"
+      ],
+      "budget": {
+        "total": 70,
+        "daily_cap": 10,
+        "start": "2026-11-09",
+        "end": "2026-11-15",
+        "currency": "USD"
+      },
+      "preview": "SAMPLE. Primary text, headline and image notes for a small test ad for one of George's books.",
+      "history": [
+        {
+          "when": "2026-11-06T10:00:00-06:00",
+          "who": "Book promo task",
+          "what": "Version 1 created"
+        }
+      ],
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 1,
+          "when": "2026-11-06T10:00:00-06:00"
+        }
+      ],
+      "approvals": []
+    },
+    {
+      "id": "itm-109",
+      "brand": "author",
+      "kind": "Substack post",
+      "channel": "substack",
+      "scheduled_for": "2026-11-12T10:00:00-06:00",
+      "title": "SAMPLE: Substack edition of Thursday's article",
+      "status": "pending",
+      "version": 1,
+      "job_level": 2,
+      "updated": "2026-11-06T10:10:00-06:00",
+      "requestedBy": "Weekly article task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean."
+      },
+      "destinations": [
+        "Substack (paste)"
+      ],
+      "preview": "SAMPLE. The article with a short personal note on top for email readers.",
+      "history": [
+        {
+          "when": "2026-11-06T10:10:00-06:00",
+          "who": "Weekly article task",
+          "what": "Version 1 created"
+        }
+      ],
+      "reviews": [],
+      "approvals": []
+    },
+    {
+      "id": "itm-110",
+      "brand": "toi",
+      "kind": "Email to supporters",
+      "channel": "email",
+      "scheduled_for": "2026-11-08T07:00:00-06:00",
+      "title": "SAMPLE: Prayer request email",
+      "status": "approved",
+      "version": 1,
+      "job_level": 3,
+      "updated": "2026-11-05T19:00:00-06:00",
+      "requestedBy": "Missions update task",
+      "slopCheck": {
+        "result": "pass",
+        "notes": "Clean. Spanish version attached."
+      },
+      "destinations": [
+        "Email list (automatic)"
+      ],
+      "preview": "SAMPLE. Three prayer requests for the coming trip, in English and Spanish.",
+      "history": [
+        {
+          "when": "2026-11-05T08:00:00-06:00",
+          "who": "Missions update task",
+          "what": "Version 1 created"
+        },
+        {
+          "when": "2026-11-05T14:00:00-06:00",
+          "who": "Reviewer",
+          "what": "Review passed for version 1"
+        },
+        {
+          "when": "2026-11-05T19:00:00-06:00",
+          "who": "George",
+          "what": "Approved version 1"
+        }
+      ],
+      "reviews": [
+        {
+          "by": "reviewer@example.com",
+          "byName": "Reviewer",
+          "passed": true,
+          "version": 1,
+          "when": "2026-11-05T19:00:00-06:00"
+        }
+      ],
+      "approvals": [
+        {
+          "by": "you@example.com",
+          "byName": "George Shamblin",
+          "version": 1,
+          "when": "2026-11-05T19:00:00-06:00"
+        }
+      ]
+    }
+  ],
+  "rhythm": [
+    {
+      "day": 1,
+      "time": "06:00",
+      "title": "Video package drafted",
+      "type": "run",
+      "brand": "author"
+    },
+    {
+      "day": 1,
+      "time": "17:00",
+      "title": "Approve video package",
+      "type": "review",
+      "brand": "author"
+    },
+    {
+      "day": 2,
+      "time": "09:00",
+      "title": "Video goes live",
+      "type": "publish",
+      "brand": "author"
+    },
+    {
+      "day": 3,
+      "time": "06:00",
+      "title": "Article package drafted",
+      "type": "run",
+      "brand": "author"
+    },
+    {
+      "day": 3,
+      "time": "17:00",
+      "title": "Approve article package",
+      "type": "review",
+      "brand": "author"
+    },
+    {
+      "day": 4,
+      "time": "09:00",
+      "title": "Article goes live",
+      "type": "publish",
+      "brand": "author"
+    },
+    {
+      "day": 5,
+      "time": "08:00",
+      "title": "Missions update drafted",
+      "type": "run",
+      "brand": "toi"
+    },
+    {
+      "day": 0,
+      "time": "17:00",
+      "title": "Weekly brief",
+      "type": "run",
+      "brand": "author"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Email subscribers",
+      "value": 1240,
+      "delta": 3.2,
+      "series": [
+        1120,
+        1135,
+        1150,
+        1170,
+        1182,
+        1201,
+        1224,
+        1240
+      ]
+    },
+    {
+      "label": "YouTube views (7 days)",
+      "value": 2810,
+      "delta": -4.1,
+      "series": [
+        3100,
+        2950,
+        3020,
+        2890,
+        2700,
+        2930,
+        2930,
+        2810
+      ]
+    },
+    {
+      "label": "Site visits (7 days)",
+      "value": 1960,
+      "delta": 8.4,
+      "series": [
+        1500,
+        1580,
+        1610,
+        1700,
+        1690,
+        1810,
+        1810,
+        1960
+      ]
+    },
+    {
+      "label": "Gifts this month",
+      "value": 34,
+      "delta": 0,
+      "series": [
+        20,
+        24,
+        26,
+        30,
+        31,
+        33,
+        34,
+        34
+      ]
+    }
+  ],
+  "metrics": {
+    "weekly": {
+      "labels": [
+        "Wk 1",
+        "Wk 2",
+        "Wk 3",
+        "Wk 4",
+        "Wk 5",
+        "Wk 6",
+        "Wk 7",
+        "Wk 8"
+      ],
+      "visits": [
+        1400,
+        1520,
+        1480,
+        1610,
+        1700,
+        1650,
+        1810,
+        1960
+      ],
+      "published": [
+        2,
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    "topPages": [
+      {
+        "label": "Sample article A",
+        "value": 640
+      },
+      {
+        "label": "Sample article B",
+        "value": 410
+      },
+      {
+        "label": "Books page",
+        "value": 300
+      },
+      {
+        "label": "Subscribe page",
+        "value": 220
+      }
+    ],
+    "sources": [
+      {
+        "name": "YouTube",
+        "connected": false
+      },
+      {
+        "name": "Substack",
+        "connected": false
+      },
+      {
+        "name": "Google Analytics",
+        "connected": false
+      },
+      {
+        "name": "Search Console",
+        "connected": false
+      },
+      {
+        "name": "Webflow",
+        "connected": false
+      },
+      {
+        "name": "Giving platform",
+        "connected": false
+      }
+    ]
+  },
+  "memory": {
+    "now": [
+      {
+        "text": "Thursday article in review, version 2",
+        "owner": "George",
+        "due": "Wed"
+      },
+      {
+        "text": "Set up the missions update task",
+        "owner": "Agent",
+        "due": "Fri"
+      },
+      {
+        "text": "Fill in the G's Plan playbook (module 25)",
+        "owner": "Agent",
+        "due": "Next week"
+      }
+    ],
+    "handoffs": [
+      {
+        "when": "2026-11-05T15:20:00-06:00",
+        "who": "Weekly article task",
+        "done": "Rewrote the opening around the story George asked for.",
+        "next": "Wait for approval, then publish Thursday 9:00."
+      },
+      {
+        "when": "2026-11-04T21:05:00-06:00",
+        "who": "Setup session",
+        "done": "Created the approval queue tables and roles.",
+        "next": "Invite two team approvers."
+      }
+    ],
+    "worklog": [
+      {
+        "when": "2026-11-05",
+        "who": "Weekly article task",
+        "what": "Version 2 of the Thursday article"
+      },
+      {
+        "when": "2026-11-04",
+        "who": "Setup session",
+        "what": "Dashboard tables and roles"
+      },
+      {
+        "when": "2026-11-03",
+        "who": "George",
+        "what": "Approved the video package"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "0001",
+        "title": "Drafts only. George decides.",
+        "date": "2026-11-06"
+      },
+      {
+        "id": "0002",
+        "title": "The brain repo is the memory",
+        "date": "2026-11-06"
+      },
+      {
+        "id": "0003",
+        "title": "Scheduled tasks first, Managed Agents for always-on jobs",
+        "date": "2026-11-06"
+      }
+    ],
+    "contextLost": 2
+  },
+  "automations": [
+    {
+      "id": "auto-1",
+      "name": "Weekly video package",
+      "kind": "Scheduled task",
+      "brand": "author",
+      "status": "ok",
+      "on": true,
+      "lastRun": "2026-11-01T06:00:00-05:00",
+      "nextRun": "2026-11-08T06:00:00-06:00",
+      "costMonth": 0,
+      "cap": 0,
+      "note": "Uses the Claude plan"
+    },
+    {
+      "id": "auto-2",
+      "name": "Weekly article package",
+      "kind": "Scheduled task",
+      "brand": "author",
+      "status": "ok",
+      "on": true,
+      "lastRun": "2026-11-04T06:00:00-06:00",
+      "nextRun": "2026-11-11T06:00:00-06:00",
+      "costMonth": 0,
+      "cap": 0,
+      "note": "Uses the Claude plan"
+    },
+    {
+      "id": "auto-3",
+      "name": "Publish on approve",
+      "kind": "Scheduled task",
+      "brand": "author",
+      "status": "idle",
+      "on": true,
+      "lastRun": "2026-10-30T11:00:00-05:00",
+      "nextRun": "On approve",
+      "costMonth": 0,
+      "cap": 0,
+      "note": "API trigger, hourly poll backup"
+    },
+    {
+      "id": "auto-4",
+      "name": "Missions update",
+      "kind": "Managed agent",
+      "brand": "toi",
+      "status": "warn",
+      "on": true,
+      "lastRun": "2026-11-04T08:00:00-06:00",
+      "nextRun": "2026-12-02T08:00:00-06:00",
+      "costMonth": 3.4,
+      "cap": 20,
+      "note": "Last run flagged by slop check"
+    },
+    {
+      "id": "auto-5",
+      "name": "Inbox triage",
+      "kind": "Managed agent",
+      "brand": "gsplan",
+      "status": "idle",
+      "on": false,
+      "lastRun": null,
+      "nextRun": "Off",
+      "costMonth": 0,
+      "cap": 10,
+      "note": "Not started"
+    }
+  ],
+  "activity": [
+    {
+      "when": "2026-11-06T07:30:00-06:00",
+      "text": "G's Plan task created a weekly item",
+      "kind": "run"
+    },
+    {
+      "when": "2026-11-05T15:10:00-06:00",
+      "text": "Thursday article version 2 is ready for review",
+      "kind": "review"
+    },
+    {
+      "when": "2026-11-04T12:00:00-06:00",
+      "text": "Changes requested on the missions update",
+      "kind": "review"
+    },
+    {
+      "when": "2026-11-03T10:00:00-06:00",
+      "text": "George approved the Tuesday video package",
+      "kind": "publish"
+    }
+  ],
+  "team": [
+    {
+      "name": "George Shamblin",
+      "email": "you@example.com",
+      "roles": {
+        "gsplan": "approver",
+        "toi": "approver",
+        "author": "approver",
+        "cel": "approver"
+      },
+      "lastSeen": "Today"
+    },
+    {
+      "name": "Reviewer",
+      "email": "reviewer@example.com",
+      "roles": {
+        "author": "approver",
+        "toi": "approver",
+        "gsplan": "viewer",
+        "cel": "viewer"
+      },
+      "lastSeen": "Today"
+    },
+    {
+      "name": "Sample teammate",
+      "email": "teammate@example.com",
+      "roles": {
+        "cel": "viewer"
+      },
+      "lastSeen": "Never"
+    }
+  ]
+}
