@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1 (2026-11-07)
+- Simpler start: George types one line into Claude instead of opening or copying a link.
+- The main handoff now says what George wants most (long-form teaching on YouTube first), the whole order of the three handoffs, how to pause and pick up later, his Claude plan limits, how Trevor's updates arrive, and the Facebook Page still to be moved to him.
+
 ## v0.4 (2026-11-06)
 - Getting great output: module 41 (pro setup for the Claude desktop app: a personal instruction file, hooks that load the brain at the start of every session and remind about the handoff, helper agents for research and review, model and effort, safe permissions) and module 42 (prompting like a pro: the eight parts of a strong ask, twelve patterns with before and after examples, and a printable cheat sheet).
 - New skill george-better-prompt: turns a rough ask into a strong one.

@@ -4,9 +4,9 @@ This repository belongs to **George Shamblin**. It holds the framework his Claud
 
 **Live site:** https://gshamfrombham.github.io/george-kit/
 
-## George: three steps
-1. **Accept the repository.** GitHub sent you an email titled something like *"andersoncollab wants to transfer george-kit to you."* Open it and click **Accept**. (It expires after a day; if it does, tell Trevor and he'll resend it.) From then on, this repository and its website are yours alone.
-2. **Hand it to Claude.** On your laptop, open the Claude desktop app, click the **Code** tab, start a **local** session, and paste everything in [HANDOFF-FOR-CLAUDE.md](HANDOFF-FOR-CLAUDE.md).
+## George: two steps (plus answering Claude's questions)
+1. **You already own this.** You accepted it on November 6. Nothing to do here.
+2. **Hand it to Claude.** On your laptop, open the Claude app, click **Code**, and type this one line, then press Enter: `Set me up from github.com/gshamfrombham/george-kit`. If it asks for a folder, pick **Documents**. Claude reads [HANDOFF-FOR-CLAUDE.md](HANDOFF-FOR-CLAUDE.md) by itself.
 3. **Answer its questions and do the steps marked GEORGE.** That's it. Claude does the rest and checks each step.
 
 **Then, in this order:**
